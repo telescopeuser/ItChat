@@ -80,7 +80,15 @@ def print_qr(fileDir):
     if config.OS == 'Darwin':
         subprocess.call(['open', fileDir])
     elif config.OS == 'Linux':
-        subprocess.call(['xdg-open', fileDir])
+	    try:
+			subprocess.call(['xdg-open', fileDir])
+		except:
+			print('www.KudosData.com fileDir: %s' % fileDir)
+			from IPython.display import Image
+			Image(fileDir)
+			# Image('./QR.png')
+
+#        subprocess.call(['xdg-open', fileDir])
     else:
         os.startfile(fileDir)
 
