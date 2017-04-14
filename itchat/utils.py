@@ -84,8 +84,8 @@ def print_qr(fileDir):
 #	    try:
 #			subprocess.call(['xdg-open', fileDir])
 #		except:
-		# Below is for Jupyter Notebook in a VM
-		print('www.KudosData.com Please open QR image at: %s, if not shown...' % fileDir)
+# Below is for Jupyter Notebook in a VM
+#		print('www.KudosData.com Please open QR image at: %s, if not shown...' % fileDir)
 		from IPython.display import Image
 		Image(fileDir)
 		# Image('./QR.png')
