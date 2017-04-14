@@ -81,8 +81,7 @@ def print_qr(fileDir):
         subprocess.call(['open', fileDir])
     elif config.OS == 'Linux':
 	    try:
-			with subprocess.call(['xdg-open', fileDir]):
-				pass
+			subprocess.call(['xdg-open', fileDir])
 		except:
 			print('www.KudosData.com fileDir: %s' % fileDir)
 			from IPython.display import Image
