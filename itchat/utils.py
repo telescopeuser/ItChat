@@ -80,7 +80,8 @@ def print_qr(fileDir):
     if config.OS == 'Darwin':
         subprocess.call(['open', fileDir])
 
-#    elif config.OS == 'Linux':
+    elif config.OS == 'Linux':
+        print('www.KudosData.com')
 #        subprocess.call(['xdg-open', fileDir])
 #	    try:
 #			subprocess.call(['xdg-open', fileDir])
