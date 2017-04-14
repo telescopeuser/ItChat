@@ -80,8 +80,8 @@ def print_qr(fileDir):
     if config.OS == 'Darwin':
         subprocess.call(['open', fileDir])
     elif config.OS == 'Linux':
-		from IPython.display import Image
-		Image(fileDir)
+	from IPython.display import Image
+	Image(fileDir)
 #        subprocess.call(['xdg-open', fileDir])
 #	    try:
 #			subprocess.call(['xdg-open', fileDir])
