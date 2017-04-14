@@ -81,11 +81,13 @@ def print_qr(fileDir):
         subprocess.call(['open', fileDir])
     elif config.OS == 'Linux':
 	    try:
-			subprocess.call(['xdg-open', fileDir])
+			with subprocess.call(['xdg-open', fileDir]):
+				pass
 		except:
 			print('www.KudosData.com fileDir: %s' % fileDir)
 			from IPython.display import Image
 			Image(fileDir)
+			print('www.KudosData.com End of QR displaying')
 			# Image('./QR.png')
 
 #        subprocess.call(['xdg-open', fileDir])
