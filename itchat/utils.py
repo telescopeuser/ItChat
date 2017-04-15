@@ -84,15 +84,15 @@ def print_qr(fileDir):
         #
         # www.KudosData.com : to support Jupyter notebook
         #
-        print('www.KudosData.com : ', fileDir)
+        # print('www.KudosData.com : %s' % fileDir)
         # subprocess.call(['xdg-open', fileDir])
         try:
             subprocess.call(['xdg-open', fileDir])
         except:
-            # Below is for Jupyter Notebook in a VM
-            print('www.KudosData.com : For Notebook')
-            from IPython.display import Image
-            Image(fileDir)
+            # Below is for Jupyter Notebook, having problem to display image in Jupyter Notebook cell... Need help
+            print('www.KudosData.com : %s' % fileDir)
+            from IPython.display import Image # Not working...
+            Image(fileDir) # Not working...
     else:
         os.startfile(fileDir)
 
