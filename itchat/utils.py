@@ -91,11 +91,8 @@ def print_qr(fileDir):
         except:
             # Below is for Jupyter Notebook, having problem to display image in Jupyter Notebook cell... Need help
             print('www.KudosData.com : %s' % fileDir)
-            %%html
-            <img id="qr" src=fileDir style="min-height:30px" />
-            <script>
-            setInterval(function(){document.getElementById('qr').src="QR.png?"+Math.random()}, 5000);
-            </script>
+            from IPython.display import Image # Not working...
+            Image(fileDir) # Not working...
     else:
         os.startfile(fileDir)
 
